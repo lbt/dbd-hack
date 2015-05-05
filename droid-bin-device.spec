@@ -8,10 +8,8 @@ Version:        0.0.6
 Release:        %{rel_date}
 Provides:       droid-bin
 Source0:        rpm.tar.bzip2
-Source10:       droid-hal-device.inc
 Source11:       package-section
 Source12:       files-section
-Source101:      droid-bin-tbj.rpmlintrc
 Source40:       repo.tar.bzip2
 
 %description
