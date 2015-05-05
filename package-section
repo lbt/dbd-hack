@@ -1,0 +1,9 @@
+
+%package -src-bionic
+Group:  System
+Summary: Syspart source for the bionic src tree to be used for droid-side code building
+
+%description -src-bionic
+This is the src tree for the bionic subdirectory from the %device syspart manifest.
+It is only meant for use in the OBS.
+

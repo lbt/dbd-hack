@@ -1,0 +1,4 @@
+
+%files -src-bionic
+%defattr(-,abuild,abuild,-)
+/home/abuild/src/droid/bionic
