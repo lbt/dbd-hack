@@ -30,7 +30,17 @@ Summary: Files that are used for flashing and are not needed on device.
 Contains files that are used for flashing but are not needed inside image, e.g.,
 flashing configurations or flashing scripts.
 
-%include package-section
+# %%include package-section
+%package -src-bionic
+Provides: droid-bin-src-bionic
+Group:  System
+Summary: Syspart source for the bionic src tree to be used for droid-side code building
+
+%description -src-bionic
+This is the src tree for the bionic subdirectory from the %device syspart manifest.
+It is only meant for use in the OBS.
+
+
 
 %prep
 # No %%setup macro !!
@@ -79,8 +89,8 @@ mkdir tmp
 echo home tree
 find /home/abuild -type d
 
-mkdir /home/abuild/src
-mv %android_root/bionic /home/abuild/src/
+mkdir -p $RPM_BUILD_ROOT/home/abuild/src
+mv %android_root/bionic $RPM_BUILD_ROOT/home/abuild/src/
 
 echo home tree
 pwd
@@ -109,4 +119,8 @@ find /home/abuild -type d
 #cp -a %{android_root}/out/target/product/%{device}/{efilinux%{?device_variant}.efi,*.fv,*_EMMC.bin,droidboot.img,esp.img,partition.tbl} $RPM_BUILD_ROOT/boot/
 
 
-%include files-section
+#%%include files-section
+
+%files -src-bionic
+%defattr(-,abuild,abuild,-)
+/home/abuild/src/droid/bionic

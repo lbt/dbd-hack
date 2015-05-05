@@ -1,5 +1,6 @@
 
 %package -src-bionic
+Provides: droid-bin-src-bionic
 Group:  System
 Summary: Syspart source for the bionic src tree to be used for droid-side code building
 
