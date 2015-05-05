@@ -123,5 +123,5 @@ find /home/abuild -type d
 #%%include files-section
 
 %files src-bionic
-%defattr(-,abuild,abuild,-)
+%defattr(-,root,root,-)
 /home/abuild/src/droid/bionic
