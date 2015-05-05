@@ -73,11 +73,11 @@ mkdir tmp
 
 %install
 
-echo RPM_BUILD_ROOT is $RPM_BUILD_ROOT
+#RPM_BUILD_ROOT is /home/abuild/rpmbuild/BUILDROOT/droid-bin-device-0.0.6-1.12.1.i386
+# cwd is /home/abuild/rpmbuild/BUILD
 
 echo home tree
-pwd
-ls -laFR
+find /home/abuild -type d
 
 mkdir /home/abuild/src
 mv %android_root/bionic /home/abuild/src/
