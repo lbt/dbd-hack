@@ -14,6 +14,10 @@ Source12:       files-section
 Source101:      droid-bin-tbj.rpmlintrc
 Source40:       repo.tar.bzip2
 
+%description
+The droid-bin package for %{ha_device}
+
+
 %if 0%{?_obs_build_project:1}
 # BuildRequires:  ubu-trusty # Skip the ubu root for hackery
 BuildRequires:  sudo-for-abuild
