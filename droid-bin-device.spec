@@ -89,8 +89,8 @@ mkdir tmp
 echo home tree
 find /home/abuild -type d
 
-mkdir -p $RPM_BUILD_ROOT/home/abuild/src
-mv %android_root/bionic $RPM_BUILD_ROOT/home/abuild/src/
+mkdir -p $RPM_BUILD_ROOT/home/abuild/src/droid
+mv %android_root/bionic $RPM_BUILD_ROOT/home/abuild/src/droid
 
 echo home tree
 pwd
