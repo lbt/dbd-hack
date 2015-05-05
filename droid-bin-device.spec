@@ -11,6 +11,7 @@ Source0:        rpm.tar.bzip2
 Source11:       package-section
 Source12:       files-section
 Source40:       repo.tar.bzip2
+Source101:      droid-bin-device.rpmlintrc
 
 %description
 The droid-bin package for %{ha_device}
