@@ -78,15 +78,15 @@ mkdir tmp
 echo RPM_BUILD_ROOT is $RPM_BUILD_ROOT
 
 echo home tree
+pwd
 ls -laFR
-
-rm -rf $RPM_BUILD_ROOT
 
 mkdir /home/abuild/src
 mv %android_root/bionic /home/abuild/src/
 
 echo home tree
-ls -laFR
+pwd
+find /home/abuild -type d
 
 
 # Create dir structure
