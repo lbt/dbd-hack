@@ -31,12 +31,12 @@ Contains files that are used for flashing but are not needed inside image, e.g.,
 flashing configurations or flashing scripts.
 
 # %%include package-section
-%package -src-bionic
+%package src-bionic
 Provides: droid-bin-src-bionic
 Group:  System
 Summary: Syspart source for the bionic src tree to be used for droid-side code building
 
-%description -src-bionic
+%description src-bionic
 This is the src tree for the bionic subdirectory from the %device syspart manifest.
 It is only meant for use in the OBS.
 
@@ -121,6 +121,6 @@ find /home/abuild -type d
 
 #%%include files-section
 
-%files -src-bionic
+%files src-bionic
 %defattr(-,abuild,abuild,-)
 /home/abuild/src/droid/bionic
