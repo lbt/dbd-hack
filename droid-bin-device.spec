@@ -123,7 +123,7 @@ find /home/abuild -type d
 #%%include files-section
 
 %post src-bionic
-chown -R abuild.abuild /home/abuild/src/droid/bionic
+chown -R abuild:abuild /home/abuild/src/droid/bionic
 
 %files src-bionic
 %defattr(-,root,root,-)
