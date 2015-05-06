@@ -123,7 +123,8 @@ find /home/abuild -type d
 #%%include files-section
 
 %post src-bionic
-chown -R abuild:abuild /home/abuild/src/droid/bionic
+# The abuild user is not setup at post time so we use the numeric id
+chown -R 399:399 /home/abuild/src/droid/bionic
 
 %files src-bionic
 %defattr(-,root,root,-)
